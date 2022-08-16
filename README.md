@@ -3,6 +3,7 @@
 By using PostgreSQL and PGAdmin, we'll analyze the distinct csv formatted files to obtain the relevant information for the changes in staffing that will be caused by the retirement of the employees born between 1952 and 1955.
 
 The databases that will be used are shown in the following image as well as how they're related to each other using their are shown in the following ERD:
+
 ![DB_ERD](/EmployeeDB.png)
 
 The relations drawn in the ERD are a clear method to stablish how to obtain the data that's stored in the different files through the use of joins.
