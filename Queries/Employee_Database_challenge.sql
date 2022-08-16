@@ -28,7 +28,7 @@ ORDER BY emp_no ASC, to_date DESC;
 SELECT
 	COUNT(title),
 	title
---INTO retiring_titles
+INTO retiring_titles
 FROM unique_titles
 GROUP BY title
 ORDER BY COUNT(title) DESC
@@ -211,3 +211,107 @@ INNER JOIN male_salaries_retirement as msr
 INNER JOIN female_salaries_retirement as fsr	
 	ON (ms.title = fsr.title)
 ORDER BY ms.title DESC;
+
+-- Retiring positions per year
+WITH retiring_in_1952 AS (
+	WITH data_1952 AS (
+		SELECT DISTINCT ON (employees.emp_no)
+			employees.emp_no,
+			employees.first_name,
+			employees.last_name,
+			titles.title,
+			titles.from_date,
+			titles.to_date
+		FROM employees
+		INNER JOIN titles
+			ON (employees.emp_no = titles.emp_no)
+		WHERE (employees.birth_date BETWEEN '1952-01-01' AND '1952-12-31') 
+			AND (titles.to_date = ('9999-01-01'))
+		ORDER BY employees.emp_no
+	)
+	SELECT
+		data_1952.title,
+		count(data_1952.title) as count_1952
+	FROM data_1952
+	GROUP BY data_1952.title
+),
+	retiring_in_1953 AS (
+	WITH data_1953 AS (
+		SELECT DISTINCT ON (employees.emp_no)
+			employees.emp_no,
+			employees.first_name,
+			employees.last_name,
+			titles.title,
+			titles.from_date,
+			titles.to_date
+		FROM employees
+		INNER JOIN titles
+			ON (employees.emp_no = titles.emp_no)
+		WHERE (employees.birth_date BETWEEN '1953-01-01' AND '1953-12-31') 
+			AND (titles.to_date = ('9999-01-01'))
+		ORDER BY employees.emp_no
+	)
+	SELECT
+		data_1953.title,
+		count(data_1953.title) as count_1953
+	FROM data_1953
+	GROUP BY data_1953.title
+),
+	retiring_in_1954 AS (
+	WITH data_1954 AS (
+		SELECT DISTINCT ON (employees.emp_no)
+			employees.emp_no,
+			employees.first_name,
+			employees.last_name,
+			titles.title,
+			titles.from_date,
+			titles.to_date
+		FROM employees
+		INNER JOIN titles
+			ON (employees.emp_no = titles.emp_no)
+		WHERE (employees.birth_date BETWEEN '1954-01-01' AND '1954-12-31') 
+			AND (titles.to_date = ('9999-01-01'))
+		ORDER BY employees.emp_no
+	)
+	SELECT
+		data_1954.title,
+		count(data_1954.title) as count_1954
+	FROM data_1954
+	GROUP BY data_1954.title
+),
+	retiring_in_1955 AS (
+	WITH data_1955 AS (
+		SELECT DISTINCT ON (employees.emp_no)
+			employees.emp_no,
+			employees.first_name,
+			employees.last_name,
+			titles.title,
+			titles.from_date,
+			titles.to_date
+		FROM employees
+		INNER JOIN titles
+			ON (employees.emp_no = titles.emp_no)
+		WHERE (employees.birth_date BETWEEN '1955-01-01' AND '1955-12-31') 
+			AND (titles.to_date = ('9999-01-01'))
+		ORDER BY employees.emp_no
+	)
+	SELECT
+		data_1955.title,
+		count(data_1955.title) as count_1955
+	FROM data_1955
+	GROUP BY data_1955.title
+)
+SELECT
+	retiring_in_1952.title,
+	retiring_in_1952.count_1952,
+	retiring_in_1953.count_1953,
+	retiring_in_1954.count_1954,
+	retiring_in_1955.count_1955
+INTO retirements_per_year
+FROM retiring_in_1952 
+FULL JOIN retiring_in_1953
+	ON (retiring_in_1952.title = retiring_in_1953.title)
+FULL JOIN retiring_in_1954
+	ON (retiring_in_1952.title = retiring_in_1954.title)
+FULL JOIN retiring_in_1955
+	ON (retiring_in_1952.title = retiring_in_1955.title);
