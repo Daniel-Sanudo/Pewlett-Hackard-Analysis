@@ -40,13 +40,27 @@ The following section will address the following questions; roles that will requ
 
 ![Retirement_Breakdown](/Images/Retirements_per_year.png)
 
+Using the birthdate of the Pewlett Hackard employees, it's possible to determine how many positions will be opened after they retire. On average, each year we'll have 6000 Senior positions available.
+
+The 2 retired managers were born on 1952 and 1955 so there's plenty of time to look for someone new who can fulfill these duties.
+
+On average, 18,000 positions will be opened each year.
+
 ### Mentors and mentees
 
 ![Mentors_per_mentees](/Images/Mentors_mentees_and_retiring_employees.png)
 
+This table breaks down the count of employees per department into the total count, the retired employees and the available mentors.
+
+Assuming our HR team hires the same amount of employees as those who will retire from Pewlett Hackard, the mentors would have to intrusct the amount of mentees specified in the rightmost column.
+
+The Finance, Production, Quality Management might need some additional mentors since each would have to instruct at least 50 new employees.
+
 ### Employees by gender count
 
 ![Employees_gender_count](/Images/Count_of_employees_by_gender.png)
+
+Around 30% of our employees by gender groups will retire, leaving 100,000 male employees and 66,980 female employees. Its noticeable that there' a significant gap between the count of both gender groups, this could mean that Pewlett Hackard could try a initiative to motivate women to join the company in order to even out the proportions.
 
 ### Position salary per age and gender
 
@@ -54,4 +68,12 @@ The following section will address the following questions; roles that will requ
 
 ![Salary_comparison_table](/Images/Salary_per_title_gender_table.png)
 
+The salary comparison raises some interesting trends:
 
+1. The staff positions have a much higher pay than even the manager positions.
+
+2. The Manager positions have a noticeable wage gap regarding both gender, and the retirement age of the employees. Male employees that are not in the retirement range earn almost 30% more than female employees in retirement age.
+
+3. The rest of the positions are paid almost the same.
+
+Although only 2 managers will retire, Pewlett Hackard will have a slightly if all expense on manager wages. However this gap of almost 30% should be addressed.
