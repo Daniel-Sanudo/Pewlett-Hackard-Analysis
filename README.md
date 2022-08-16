@@ -33,16 +33,24 @@ We had to filter out the employees that no longer work with Pewlett Hackard, thi
 
 ## Summary
 
-The following section will address the following questions; roles that will require new hires, the mentor/mentee distribution and the 2 additional questions about the 
+The following section will address the following questions; roles that will require new hires, the mentor/mentee distribution and the 2 additional questions about the total count of employees by gender, as well as the salary differences between positions, retirement condition and gender.
 
 ### Roles that will be needed
 
+![Retirement_Breakdown](/Images/Retirements_per_year.png)
 
 ### Mentors and mentees
+
 ![Mentors_per_mentees](/Images/Mentors_mentees_and_retiring_employees.png)
 
-### Position distribution per gender
+### Employees by gender count
 
+![Employees_gender_count](/Images/Count_of_employees_by_gender.png)
 
 ### Position salary per age and gender
+
+![Salary_comparison_chart](/Images/Salary_per_title_gender.png)
+
+![Salary_comparison_table](/Images/Salary_per_title_gender_table.png)
+
 
